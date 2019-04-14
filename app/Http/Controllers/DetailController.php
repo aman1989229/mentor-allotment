@@ -14,6 +14,10 @@ class DetailController extends Controller
      public function index()
     {   
     	$user = Auth::user();
-    	return view('forms.form')->withUser($user);
+    	if ($user->role_id=='2') {
+    		return view('forms.uform')->withUser($user);
+    	}
+    	else
+    	return view('forms.mform')->withUser($user);	
     }
 }
