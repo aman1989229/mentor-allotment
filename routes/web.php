@@ -23,3 +23,7 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//contact us
+Route::get ('about','PageController@about')->name('about');
+Route::get ('contact','PageController@contact')->name('contact');

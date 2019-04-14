@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Mentorat</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,7 +12,9 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-image: url('img/Mentorat.jpg');
+                background-repeat: no-repeat;
+                background-size: 99.9%;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -45,19 +47,22 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 90px;
+                color: black;
+                font-weight: 200;
             }
 
             .links > a {
-                color: #636b6f;
+                color: black;
                 padding: 0 25px;
-                font-size: 13px;
+                font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
             }
-
+            .links > a :hover{
+                color: white;
+            }
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -81,17 +86,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Mentorat
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="about">About Us</a>
+                    <a href="contact">Contact Us</a>
                 </div>
             </div>
         </div>
