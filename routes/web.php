@@ -27,3 +27,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 //contact us
 Route::get ('about','PageController@about')->name('about');
 Route::get ('contact','PageController@contact')->name('contact');
+Route::get ('details','DetailController@index')->name('details');

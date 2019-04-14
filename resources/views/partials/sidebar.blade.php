@@ -26,7 +26,7 @@ img:hover {
         <div class="col-md-12">
         <ul class="list-unstyled components">
             <li class="active">
-                <a href="#" >Upload Details</a>
+                <a href="{{route('details')}}" >Upload Details</a>
             </li>
            <hr style="background-color: black;" />
             <li class="active">
