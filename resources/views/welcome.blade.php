@@ -39,7 +39,7 @@
             .top-right {
                 position: absolute;
                 right: 10px;
-                top: 18px;
+                top: 20px;
             }
 
             .content {
@@ -54,9 +54,9 @@
 
             .links > a {
                 color: black;
-                padding: 0 25px;
+                padding: 0 30px;
                 font-size: 20px;
-                font-weight: 600;
+                font-weight: 900;
                 letter-spacing: .1rem;
                 text-decoration: none;
             }
@@ -73,12 +73,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="border: 1px solid white;outline-style: solid;outline-color: black;background-color: gray;">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}"style="border: 1px solid black;background-image:linear-gradient(to left, lightgray,gray);opacity: 0.8;">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}"style="border: 1px solid black;background-image:linear-gradient(to left, lightgray , gray);opacity: 0.8;">Register</a>
                         @endif
                     @endauth
                 </div>
