@@ -41,7 +41,7 @@ a {
   color: white;
 }
 body  {
-  background-image: url("img/background.jpg");
+  background-image: url("img/bg.jpg");
 }
 
 button:hover, a:hover {
@@ -77,7 +77,7 @@ button:hover, a:hover {
 
 <div class="card">
   <p><button>Contact</button></p>
-  <img src="/img/shivani.jpg" alt="Shivani" style="width:50%;height: 250px;border-radius: 50%;">
+  <img src="/img/shivu.jpg" alt="Shivani" style="width:50%;height: 250px;border-radius: 50%;">
   <h1 style="color: blue;">Shivani</h1>
   <p class="title">Web Developer</p>
   <p style="color: white;font-weight: bold;">MNNIT Allahabad</p>
