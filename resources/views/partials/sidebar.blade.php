@@ -43,7 +43,7 @@ img:hover {
                 
             </li>
             <li class="active">
-                <a href="{{route('team.show',$user->id)}}">Your Team</a>
+                <a href="{{route('team.show',$user->id)}}">My Team</a>
 
             </li>
              @endif

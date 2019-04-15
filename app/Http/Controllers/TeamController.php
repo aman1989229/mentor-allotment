@@ -53,10 +53,11 @@ class TeamController extends Controller
      */
     public function show($id)
     {
-        //
-
-
+        $user = Auth::user();
+       $teams = Detail::where('m_assigned',$id)->get();
        
+       return view('projects.myteam')->withTeams($teams)->withUser($user);
+
     }
 
     /**
