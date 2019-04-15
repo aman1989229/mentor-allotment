@@ -68,7 +68,7 @@ class FormController extends Controller
 
           Session::flash('success','Details has been saved successsfully!!!');
         //redirect to another base
-         return view('forms.show');
+         return view('home')->withUser($user);;
           }
 
           else{
@@ -90,7 +90,7 @@ class FormController extends Controller
 
           Session::flash('success','Details has been saved successsfully!!!');
         //redirect to another base
-         return view('forms.show');
+         return view('home')->withUser($user);;
           }
          
     }

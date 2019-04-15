@@ -30,6 +30,7 @@ Route::get ('contact','PageController@contact')->name('contact');
 Route::get ('details','DetailController@index')->name('details');
 Route::get ('students','DetailController@students')->name('students');
 
+Route::get ('dashboard','DetailController@dashboard')->name('dashboard');
 
 Route::resource('form','FormController',['except'=>'create']);
 

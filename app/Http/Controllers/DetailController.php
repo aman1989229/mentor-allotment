@@ -25,6 +25,12 @@ class DetailController extends Controller
     	return view('forms.mform')->withUser($user);	
     }
 
+
+    
+   public function dashboard()
+    {         $user=Auth::user();
+             return view('forms.dashboard')->withUser($user);
+    }
    
    public function students()
     {   
