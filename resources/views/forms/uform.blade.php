@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="row" style="background-image: url('img/11.jpg');background-repeat: no-repeat;background-size: 100%;">
+<div class="row">
 	
-	<div class="col-md-8 col-md-offset-2" style="margin-left: 200px; background-color:gray;">
+	<div class="col-md-8 col-md-offset-2" style="margin-left: 200px;">
 		<h1 style="text-align: center;"> Upload Your Details</h1>
 		<hr>
 		<div style="margin-left: 20px;"> 
