@@ -3,11 +3,11 @@
 
 <div class="row">
 	
-	<div class="col-md-8 col-md-offset-2" style="margin-left: 30px;">
+	<div class="col-md-8 col-md-offset-2" style="margin-left: 200px;">
 		<h1 style="text-align: center;"> Upload Your Details</h1>
     
 		<hr>
-		
+		<div style="margin-left: 20px;">
 		{!! Form::open(['route' => 'form.store','method'=>'POST']) !!}<!-- here form will open only but when we use model lets check edit.php inside posts
        upload a image set (files = true) -->
            {{Form::label('Name', 'Name:')}}
@@ -23,7 +23,7 @@
 
            {{Form::submit('Create Post',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px;'))}}
         {!! Form::close() !!}
-	</div>
+	</div></div>
 
 </div>
 
