@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Detail;
+use App\Mentordetail;
+use User;
+use App\Cgpa;
+use Session;
 
 class HomeController extends Controller
 {
@@ -22,7 +28,8 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    {
-        return view('home');
+    {    
+        $user=Auth::user();
+        return view('home')->withUser($user);
     }
 }

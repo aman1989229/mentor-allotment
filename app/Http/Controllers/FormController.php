@@ -104,6 +104,15 @@ class FormController extends Controller
     public function show($id)
     {
         //
+        $user = Auth::user();
+        if ($user->role_id=='3') {
+            $post=Detail::find($id);
+        }
+        else{
+            $post=Mentordetail::find($id);
+        }
+
+         return view('forms.show')->withPost($post)->withUser($user);
 
     }
 

@@ -28,5 +28,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get ('about','PageController@about')->name('about');
 Route::get ('contact','PageController@contact')->name('contact');
 Route::get ('details','DetailController@index')->name('details');
+Route::get ('students','DetailController@students')->name('students');
+
 
 Route::resource('form','FormController',['except'=>'create']);
+
