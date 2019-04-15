@@ -81,12 +81,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}"style="border-bottom:2px solid black;border-right:2px solid black;border-radius: 50px;">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" style="border-bottom: 2px solid black;opacity: 0.8;border-radius: 50px;">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="border-bottom:2px solid black;opacity: 0.8;border-radius: 50px;">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -103,7 +103,7 @@
                 <div style="font-size: 24px; color: white;text-align: justify;font-family:Times New Roman;padding-right: 5%; padding-left: 5%;">
                 	Mentorat is a project that aims to establish a bond between seniors and juniors in order to provide them with the studies related, placement related and career guidance from a perspective of development.
                 </div>
-                <div style="color:#032514; font-weight:bolder;font-family: arial; font-size: 30px; padding: 30px; text-align: justify;">
+                <div style="color:#C22B10; margin-top: 20px; font-weight:bolder;font-family: arial; font-size: 30px; padding: 30px; text-align: justify;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;">
                     "Every great achiever is inspired by a great mentor."
                 </div>
                 <div style="font-size: 18px;color:white;text-align: justify;font-family:Times New Roman;padding-right:5%;padding-left:5%;">
