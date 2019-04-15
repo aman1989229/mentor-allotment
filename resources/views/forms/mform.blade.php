@@ -21,7 +21,7 @@
              {{Form::select('role_id', array('2' => 'User', '3' => 'Mentor'))}}  
 
 
-           {{Form::submit('Create Post',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px;'))}}
+           {{Form::submit('Upload Details',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px;'))}}
         {!! Form::close() !!}
 	</div>
 

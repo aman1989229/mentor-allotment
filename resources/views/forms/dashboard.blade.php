@@ -37,6 +37,7 @@
 <div class="row">
 @include('partials.sidebar')
 
+@if($user->role_id=='3')
 <div class="col-md-10">
 
   <div class="clearfix container-fluid row" style="margin-left: 10px;">
@@ -45,7 +46,7 @@
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        
-        	<a href="#" class="btn btn-primary">Above 9.5</a>
+        	<a href="detail/?cgpa=1" class="btn btn-primary">Above 9.5</a>
     	</div>
 		</div>
 	</div>
@@ -54,7 +55,7 @@
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        
-        	<a href="#" class="btn btn-primary">Between 9.5 and 8.5</a>
+        	<a href="detail/?cgpa=2" class="btn btn-primary">Between 9.5 and 8.5</a>
     	</div>
 		</div>
 	</div>
@@ -63,7 +64,7 @@
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        
-        	<a href="#" class="btn btn-primary">Between 8.5 and 7.5</a>
+        	<a href="detail/?cgpa=3" class="btn btn-primary">Between 8.5 and 7.5</a>
     	</div>
 		</div>
 	</div>
@@ -73,12 +74,25 @@
     		<div class="panel-content">
     			
         	<i class="voyager-group"></i>        
-        	<a href="#" class="btn btn-primary">Below 7.5</a>
+        	<a href="detail/?cgpa=4" class="btn btn-primary">Below 7.5</a>
     	</div>
 		</div>
 	</div>
 
 </div></div>
+@else
+
+<div class="col-sm-3">
+    	<div class="panel widget center bgimage" style="margin-left:80px;overflow:hidden;background-image:url('http://127.0.0.1:8000/admin/assets?path=images%2Fwidget-backgrounds%2F01.jpg');">
+    	
+    		<div class="panel-content">
+        	<i class="voyager-group"></i>        
+        	<a href="detail" class="btn btn-primary">Mentors</a>
+    	</div>
+		</div>
+	</div>
+
+@endif
 	</div>
 
 @endsection
