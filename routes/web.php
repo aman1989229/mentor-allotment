@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('assign', function () {
+    return view('projects.assign');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -33,4 +36,5 @@ Route::get ('students','DetailController@students')->name('students');
 Route::get ('dashboard','DetailController@dashboard')->name('dashboard');
 
 Route::resource('form','FormController',['except'=>'create']);
+Route::resource('team','TeamController',['except'=>'create']);
 

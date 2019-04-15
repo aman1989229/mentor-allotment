@@ -47,4 +47,20 @@ class DetailController extends Controller
 
     }
 
+    public function cgpa()
+       {   
+          
+          $user = Auth::user();
+        if (request()->has('cgpa')) {
+            $lists=Detail::where('cgpa',request('cgpa'))->paginate(5);
+        }
+       else
+       {
+         $lists = Mentordetail::paginate(5);
+       }
+        return view('forms.list')->withLists($lists)->withUser($user);
+     
+      }
+
+      
 }
