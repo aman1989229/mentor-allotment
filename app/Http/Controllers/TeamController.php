@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Detail;
 use App\Mentordetail;
 use User;
+use App\Team;
 use App\Cgpa;
 use Session;
 
@@ -53,6 +54,9 @@ class TeamController extends Controller
     public function show($id)
     {
         //
+
+
+       
     }
 
     /**
@@ -64,6 +68,18 @@ class TeamController extends Controller
     public function edit($id)
     {
         //
+         $user = Auth::user();
+            $assign=Detail::find($id);
+
+            $assign->assigned='1';
+            $assign->m_assigned=$user->id;
+            $assign->save();
+
+            $team=new Team;
+            $team->user_id=$user->id;
+            $team->student_id=$assign->id;
+            $team->save();
+            return view('dashboard');
     }
 
     /**

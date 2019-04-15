@@ -62,5 +62,16 @@ class DetailController extends Controller
      
       }
 
+
+     public function assign($id)
+    {        
+              $user = Auth::user();
+            $assign=Detail::find($id);
+
+            $assign->assigned='1';
+            $assign->m_assigned=$user->id;
+
+            return view('dashboard');
+    }
       
 }

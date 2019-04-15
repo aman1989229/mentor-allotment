@@ -15,6 +15,7 @@
                   <th scope="col">Name</th>
                   <th scope="col">Registraion No:</th>
                   <th scope="col">CGPA(Out of 10)</th>
+                  <th scope="col">Status</th>
                   @else
                   <th scope="col">S.n.</th>
                   <th scope="col">Name</th>
@@ -38,6 +39,13 @@
                         @if($list->cgpa=='4')Below 7.5 @endif</td>
                      @else
                       <td>{{ $list->name }}</td>
+                     @endif
+                     @if($user->role_id=='3')
+                        @if($list->assigned=='2')
+                     <td><a href="{{route('team.edit',$list->id)}}" class="btn btn-success btn-sm">Not Assigned</a></td>
+                     @else
+                     <td><a href="#" class="btn btn-danger btn-sm">Assigned</a></td>
+                     @endif
                      @endif
                    	<td><a href="{{route('form.show',$list->id)}}" class="btn btn-success btn-sm">View</a></td>
                    </tr>
