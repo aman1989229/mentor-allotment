@@ -23,9 +23,11 @@
                     <td>@php echo($i++); @endphp </td>
                    	<td>{{ $team->name }}</td>
                    	<td>{{ $team->rno }}</td>
-                   	<td>@if($team->status=='1') Working@endif
-                        @if($list->cgpa=='2')Completed @endif
-                        @if($list->cgpa=='3')Project Not Assigned @endif
+                   	<td>@if($team->status=='3') NotAssigned @endif
+                   		@if($team->status=='2') Completed @endif
+                   		@if($team->status=='1') Working @endif
+                   	</td>
+                      <td> @if($team->status=='3')<a href="#" class="btn btn-warning btn-sm">Assign Project</a>@endif</td>
                    	<td><a href="#" class="btn btn-success btn-sm">View</a></td>
                    </tr>
                    
