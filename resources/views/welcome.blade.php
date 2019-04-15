@@ -73,12 +73,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" style="border: 1px solid white;outline-style: solid;outline-color: black;background-color: gray;">Home</a>
+                        <a href="{{ url('/home') }}" style="border: 1px solid white;background-color: gray;border-radius: 50px;">Home</a>
                     @else
-                        <a href="{{ route('login') }}"style="border: 1px solid black;background-image:linear-gradient(to left, lightgray,gray);opacity: 0.8;">Login</a>
+                        <a href="{{ route('login') }}"style="border: 1px solid black;background-image:linear-gradient(to left, lightgray,gray);opacity: 0.8;border-radius: 50px;">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}"style="border: 1px solid black;background-image:linear-gradient(to left, lightgray , gray);opacity: 0.8;">Register</a>
+                            <a href="{{ route('register') }}"style="border: 1px solid black;background-image:linear-gradient(to left, lightgray , gray);opacity: 0.8;border-radius: 50px;">Register</a>
                         @endif
                     @endauth
                 </div>
