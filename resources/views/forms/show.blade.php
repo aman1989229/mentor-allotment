@@ -24,7 +24,7 @@
   <a class="btn btn-warning btn-lg" href="#" style="margin-left: 5px;">Make Request</a>
  <!-- @else
   <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;"  class="alert alert-danger">Booked</div>-->
-  <a href="{{route('form.edit',$post->id)}}" class="btn-danger btn-lg">Convert into Pdf</a>
+  <a href="#" class="btn-danger btn-lg">Convert into Pdf</a>
   @endif
 </div>
 

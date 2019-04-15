@@ -10,7 +10,6 @@ use App\Mentordetail;
 use User;
 use App\Cgpa;
 use Session;
-use  PDF;
 
 class FormController extends Controller
 {
@@ -126,10 +125,6 @@ class FormController extends Controller
     public function edit($id)
     {
         //
-        $user = Auth::user();
-        $post=Post::find($id);
-        $pdf = PDF::loadView('forms.pdf',compact('post'));
-          return $pdf->download('invoice.pdf');
     }
 
     /**
