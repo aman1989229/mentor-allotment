@@ -31,7 +31,7 @@ img:hover {
            <hr style="background-color: black;" />
            @if($user->role_id=='2')
             <li class="active">
-                <a href="{{route('dashboarad')}}">Mentors</a>
+                <a href="{{route('dashboard')}}">Mentors</a>
                 
             </li>
             <li class="active">
