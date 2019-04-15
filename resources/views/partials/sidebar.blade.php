@@ -29,16 +29,27 @@ img:hover {
                 <a href="{{route('details')}}" >Upload Details</a>
             </li>
            <hr style="background-color: black;" />
+           @if($user->role_id=='2')
             <li class="active">
                 <a href="#">Mentors</a>
                 
             </li>
             <li class="active">
                 <a href="#">Your Mentor</a>
+              </li>
+             @else   
+                <li class="active">
+                <a href="{{route('students')}}">Students</a>
                 
             </li>
+            <li class="active">
+                <a href="#">Your Team</a>
+
+            </li>
+             @endif
             <hr style="background-color: black;" />
-        </ul></div>
+        </ul>
+      </div>
     </nav>
 
 </div>
