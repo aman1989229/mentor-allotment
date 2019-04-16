@@ -40,12 +40,12 @@
                      @endif
                      @if($user->role_id=='3')
                         @if($list->assigned=='2')
-                     <td><a href="{{route('team.edit',$list->id)}}" class="btn btn-success btn-sm">Not Assigned</a></td>
+                     <td><a href="{{route('team.edit',$list->user_id)}}" class="btn btn-success btn-sm">Not Assigned</a></td>
                      @else
                      <td><a href="#" class="btn btn-danger btn-sm">Assigned</a></td>
                      @endif
                      @endif
-                   	<td><a href="{{route('form.show',$list->id)}}" class="btn btn-success btn-sm">View</a></td>
+                   	<td><a href="{{route('form.show',$list->user_id)}}" class="btn btn-success btn-sm">View</a></td>
                    </tr>
                    
                   @endforeach

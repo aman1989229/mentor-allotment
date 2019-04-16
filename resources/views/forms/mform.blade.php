@@ -19,7 +19,7 @@
             {{Form::textarea('requests', null,array('class'=>'form-control'))}}
             <br/>
              {{Form::label('Role', 'Role:'),array('style'=>'margin-top:10px')}}
-             {{Form::select('role_id', array('2' => 'User', '3' => 'Mentor'))}}  
+             {{Form::select('role_id', array('2' => 'Student', '3' => 'Mentor'))}}  
 
 
            {{Form::submit('Upload Details',array('class' => 'btn btn-success btn-lg btn-block','style'=>'margin-top:20px;'))}}
