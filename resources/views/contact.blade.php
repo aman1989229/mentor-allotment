@@ -60,7 +60,7 @@ button:hover, a:hover {
 <div class="card" >
   <p><button>Contact</button></p>
   <img src="/img/aman.jpg" alt="Aman" style="width:50%;height: 250px;border-radius: 50%;">
-  <h1 style="color: blue;">Aman</h1>
+  <h1 style="color: orange;">Aman</h1>
   <p class="title"></p>
   
   <p class="title">Web Developer</p>
@@ -78,7 +78,7 @@ button:hover, a:hover {
 <div class="card">
   <p><button>Contact</button></p>
   <img src="/img/shivu.jpg" alt="Shivani" style="width:50%;height: 250px;border-radius: 50%;">
-  <h1 style="color: blue;">Shivani</h1>
+  <h1 style="color: yellow;">Shivani</h1>
   <p class="title">Web Developer</p>
   <p style="color: white;font-weight: bold;">MNNIT Allahabad</p>
 
@@ -93,14 +93,14 @@ button:hover, a:hover {
 <div class="row">
 <div class="card" >
   <p><button>Contact</button></p>
-  <img src="/img/vikas.jpeg" alt="vikas" style="width:50%;height: 250px;border-radius: 50%">
-  <h1 style="color: blue;">Vikas</h1>
-  <p class="title">Web developer</p>
+  <img src="/img/vikas.jpeg" alt="vikash" style="width:50%;height: 250px;border-radius: 50%">
+  <h1 style="color: orange;">Vikash</h1>
+  <p class="title">Web Developer</p>
   <p style="color: white;font-weight: bold;">MNNIT Allahabad</p>
  
-  <p class="title">E-Mail: <span style="text-decoration: underline;">crvikash@gmail.com</span></p>
+  <p class="title">E-Mail:<br/> <span style="text-decoration: underline;">crvikash@gmail.com</span></p>
    <div style="margin: 24px;">   
-    <a href="www.facebook.com/VikaashKr"><i class="fa fa-facebook"></i></a> 
+    <a href="https://www.facebook.com/VikaashKr"><i class="fa fa-facebook"></i></a> 
   </div>
 </div>
 </div>

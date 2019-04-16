@@ -62,17 +62,17 @@
                             </div>
                         </div>
                         
-                           <div class="form-group row">
+                           <div class="form-group row" style="margin-left: 160px;">
 
                             <div class="col-md-6">
-                               <div class="form-group">
-                                <label for="role_id">Role:</label>
+                               <span class="form-group">
+                                <label for="role_id">Role</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="role_id">
                                   <option value="2">User</option>
                                   <option value="3">Mentor</option>
                                   
                                </select>
-                             </div>
+                             </span>
 
                            
                             </div>
