@@ -7,21 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'EvePlanner') }}</title>
+    <title>{{ config('app.name', 'Mentorat') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <link rel="stylesheet" type="text/css" href="{{asset('css/jquery.datetimepicker.min.css')}}"/>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/jquery.datetimepicker.js')}}"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#datetimepicker').datetimepicker({
-            format: 'd/m/Y g:i A'
-        }); 
-        });
-    </script>
        <!-- -->
      
        <!-- -->
@@ -46,7 +35,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'EvePlanner') }}
+                    {{ config('app.name', 'Mentorat') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -72,8 +61,8 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret" style="padding-left: 40px;"></span>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre><div style="background-color: #D8D9DC; font-size:18px;padding: 15px; border-radius: 40px;">
+                                    {{ Auth::user()->name }} <span class="caret" style="padding-left: 40px;float: left;"></span></div>
                                 </a>
                                   
                                 

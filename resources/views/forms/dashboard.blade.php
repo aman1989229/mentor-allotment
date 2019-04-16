@@ -10,23 +10,25 @@
 		}
 		.panel{
 			width: 250px;
-			height: 360px;
+			height: 280px;
 			padding-left: 20px;
 			padding-right: 2px;
-			border-radius: 30px;
+			border-radius: 20% 0 20% 0;
 			float: left;
 		}
 		.widget{
 			padding: 2px;
 			margin: 0px;
 			float: left;
-			border-bottom: 6px solid blue;
-			border-right: 6px solid blue;
+			border:1px solid black;
 		}
 		.panel-content{
 			text-align: center;
 			color: white;
 			margin: 20px;
+		}
+		.btn-primary{
+			margin-top: 120px;
 		}
 	</style>
 </head>
@@ -42,7 +44,7 @@
 
   <div class="clearfix container-fluid row" style="margin-left: 10px;">
     <div class="col-sm-3" >
-    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image:url('http://127.0.0.1:8000/admin/assets?path=images%2Fwidget-backgrounds%2F01.jpg');">
+    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image: url('img/giphy.gif')">
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        
@@ -51,7 +53,7 @@
 		</div>
 	</div>
 	<div class="col-sm-3">
-    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image:url('http://127.0.0.1:8000/admin/assets?path=images%2Fwidget-backgrounds%2F01.jpg');">
+    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image: url('img/gip4.gif')">
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        
@@ -60,7 +62,7 @@
 		</div>
 	</div>
 	<div class="col-sm-3">
-    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image:url('http://127.0.0.1:8000/admin/assets?path=images%2Fwidget-backgrounds%2F01.jpg');">
+    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image: url('img/gip2.gif')">
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        
@@ -69,7 +71,7 @@
 		</div>
 	</div>
 	<div class="col-sm-3">
-    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image:url('http://127.0.0.1:8000/admin/assets?path=images%2Fwidget-backgrounds%2F01.jpg');">
+    	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image: url('img/gip3.gif')">
     	
     		<div class="panel-content">
     			
@@ -83,7 +85,7 @@
 @else
 
 <div class="col-sm-3">
-    	<div class="panel widget center bgimage" style="margin-left:80px;overflow:hidden;background-image:url('http://127.0.0.1:8000/admin/assets?path=images%2Fwidget-backgrounds%2F01.jpg');">
+    	<div class="panel widget center bgimage" style="margin-left:380px;margin-top:40px;overflow:hidden;background-image: url('img/tenor.gif')">
     	
     		<div class="panel-content">
         	<i class="voyager-group"></i>        

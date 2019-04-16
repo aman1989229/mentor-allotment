@@ -4,10 +4,8 @@
 <div class="row">
   @include('partials.sidebar')
 
-		<div class="col-md-10">
-	       	 
-          
-			     <table class="table" style="margin-left: 3%; margin-top: 4%;">
+		<div class="col-md-10" style="float: left;">
+			     <table class="table" style="margin-left: 3%; margin-top: 4%;float: left;">
               <thead>
                 <tr>
                   @if($user->role_id=='3')
