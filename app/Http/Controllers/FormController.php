@@ -98,7 +98,7 @@ class FormController extends Controller
        
               
          $post->save();
-
+           $user = Auth::user();
           Session::flash('success','Details has been saved successsfully!!!');
         //redirect to another base
          return view('home')->withUser($user);;

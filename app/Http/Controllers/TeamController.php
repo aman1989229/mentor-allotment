@@ -72,7 +72,7 @@ class TeamController extends Controller
     {
         //
          $user = Auth::user();
-            $assign=Detail::find($id);
+            $assign=Detail::where('user_id','=',$id)->first();
 
             $assign->assigned='1';
             $assign->m_assigned=$user->id;
