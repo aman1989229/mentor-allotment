@@ -6,11 +6,14 @@
 
 @if($detail->m_assigned==NULL)
   
-  <div>
+  <div style="margin:10%;padding-left: 200px;">
+  <marquee direction="left" onmouseover="stop();" onmouseout="start();" >
     <h1>Mentor Not Assigned yet</h1>
-  </div>
+  </h1></marquee>
+</div>
 @else
 	<div class="col-md-10" style="margin-left: 280px;">
+
         <table class="table" style="width:700px;border: 2px solid black;margin-top: -40%">
               <thead>
                 <tr>

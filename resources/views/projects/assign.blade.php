@@ -5,7 +5,7 @@
 
 <div class="row">
 	
-	<div class="col-md-8 col-md-offset-2" style="margin: 10px;margin-left: 200px;padding:40px;border: 4px solid black;border-radius: 70px 0 70px 0;color: white;">
+	<div class="col-md-8 col-md-offset-2" style="margin: 10px;margin-left: 200px;padding:40px;border: 4px solid black;border-radius: 70px 0 70px 0;color: black;">
 		<h1 style="text-align: center;"> Project Details</h1>
 		<hr>
 		

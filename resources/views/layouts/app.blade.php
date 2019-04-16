@@ -33,7 +33,7 @@
 
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container" style="background-image: url('img/logo.png'); background-repeat: no-repeat;">
+            <div class="container" style="height:80px;background-image: url('/img/logo.png'); background-repeat: no-repeat;">
                <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Mentorat') }}
                 </a>-->
