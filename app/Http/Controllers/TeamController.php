@@ -72,7 +72,7 @@ class TeamController extends Controller
     {
         //
          $user = Auth::user();
-            $assign=Detail::find($id);
+            $assign=Detail::where('user_id','=',$id)->first();
 
             $assign->assigned='1';
             $assign->m_assigned=$user->id;
@@ -118,7 +118,8 @@ class TeamController extends Controller
             $user->assigned='2';
             $user->save();
             $post->delete(); 
-            $project->delete();
+            if($project!=NULL)
+           { $project->delete();}
 
             $user = Auth::user();
        $teams = Detail::where('m_assigned',$user->id)->get();

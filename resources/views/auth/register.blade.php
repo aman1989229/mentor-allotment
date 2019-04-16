@@ -68,7 +68,7 @@
                                <span class="form-group">
                                 <label for="role_id">Role</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="role_id">
-                                  <option value="2">User</option>
+                                  <option value="2">Student</option>
                                   <option value="3">Mentor</option>
                                   
                                </select>

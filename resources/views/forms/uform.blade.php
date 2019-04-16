@@ -20,8 +20,10 @@
             {{Form::textarea('requests', null,array('class'=>'form-control'))}}
 <br/>
              {{Form::label('Role', 'Role:'),array('style'=>'margin-top:10px')}}
-             {{Form::select('role_id', array('2' => 'User', '3' => 'Mentor'))}}  
 <br/>
+
+             {{Form::select('role_id', array('2' => 'Student', '3' => 'Mentor'))}}  
+
              {{Form::label('CGPA', 'CGPA:'),array('style'=>'margin-top:10px')}}
              {{Form::select('cgpa', array('1' => 'above:9.5', '2' => 'between:9.5-8.5','3'=>'between:8.5-7.5','4'=>'below:7.5'))}}  
 
