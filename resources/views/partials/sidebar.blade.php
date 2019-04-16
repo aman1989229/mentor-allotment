@@ -29,6 +29,8 @@ img:hover {
                 <a href="{{route('details')}}" >Upload Details</a>
             </li>
            <hr style="background-color: black;" />
+
+           @if($user->form_status=='1')
            @if($user->role_id=='2')
             <li class="active">
                 <a href="{{route('dashboard')}}">Mentors</a>
@@ -49,6 +51,7 @@ img:hover {
                 <a href="{{route('team.show',$user->id)}}">My Team</a>
 
             </li>
+             @endif
              @endif
             <hr style="background-color: black;" />
         </ul>

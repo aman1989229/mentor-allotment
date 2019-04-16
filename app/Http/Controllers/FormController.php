@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Detail;
 use App\Mentordetail;
-use User;
 use App\Cgpa;
 use Session;
+use App\User;
 
 class FormController extends Controller
 {
@@ -54,6 +54,10 @@ class FormController extends Controller
         ));
         //dd($request);
          $user = Auth::user();
+    
+         $formstatus=User::where('id','=',$user->id)->first();
+         $formstatus->form_status='1';
+         $formstatus->save();
          $post = new Detail;
            
          $post->user_id=$user->id;
@@ -62,10 +66,11 @@ class FormController extends Controller
          $post->requests=$request->requests;
          $post->role_id=$request->role_id;
          $post->cgpa=$request->cgpa;
+
        
               
          $post->save();
-
+         $user=Auth::user();
           Session::flash('success','Details has been saved successsfully!!!');
         //redirect to another base
          return view('home')->withUser($user);;
@@ -78,6 +83,12 @@ class FormController extends Controller
         ));
         //dd($request);
         
+        $user = Auth::user();
+    
+         $formstatus=User::where('id','=',$user->id)->first();
+         $formstatus->form_status='1';
+         $formstatus->save();
+         
          $post = new Mentordetail;
            
          $post->user_id=$user->id;
@@ -104,12 +115,13 @@ class FormController extends Controller
     public function show($id)
     {
         //
+      
         $user = Auth::user();
         if ($user->role_id=='3') {
-            $post=Detail::find($id);
+            $post=Detail::where('user_id','=',$id)->first();
         }
         else{
-            $post=Mentordetail::find($id);
+            $post=Mentordetail::where('user_id','=',$id)->first();
         }
 
          return view('forms.show')->withPost($post)->withUser($user);
