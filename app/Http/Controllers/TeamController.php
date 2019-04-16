@@ -82,7 +82,7 @@ class TeamController extends Controller
             $team->user_id=$user->id;
             $team->student_id=$assign->user_id;
             $team->save();
-
+            Session::flash('success','Added into Team successsfully!!!');
            $user = Auth::user();
        $teams = Detail::where('m_assigned',$user->id)->get();
        
@@ -119,7 +119,9 @@ class TeamController extends Controller
             $user->save();
             $post->delete(); 
             if($project!=NULL)
-           { $project->delete();}
+           { $project->delete();
+              Session::flash('success','Removed successsfully!!!');
+           }
 
             $user = Auth::user();
        $teams = Detail::where('m_assigned',$user->id)->get();

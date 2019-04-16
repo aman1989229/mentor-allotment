@@ -47,13 +47,21 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         //
+
+        $this->validate($request,array(
+           'title'=>'required|max:50',
+           'statement'=>'required',
+           'description'=>'required',
+           'deadline'=>'required'
+           
+        ));
           $id=$request->input('user_id');
  
         $user=Detail::where('user_id','=',$id)->first();
         $user->status='1';
 
         $user->save();
-
+        
         
         $project=new Project;
         $project->user_id=$request->user_id;
@@ -64,7 +72,7 @@ class ProjectController extends Controller
          
                
         $project->save();
-
+ Session::flash('success','Project Assigned successsfully please click refresh!!!');
 
          $user = Auth::user();
        $teams = Detail::where('m_assigned',$id)->get();
@@ -122,6 +130,37 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $this->validate($request,array(
+           'title'=>'required|max:50',
+           'statement'=>'required',
+           'description'=>'required',
+           'deadline'=>'required'
+           
+        ));
+          $id=$request->input('user_id');
+ 
+        $user=Detail::where('user_id','=',$id)->first();
+        $user->status='1';
+
+        $user->save();
+        
+        
+        $project=Project::where('user_id','=',$id)->first();
+        $project->user_id=$request->user_id;
+        $project->title=$request->title;
+        $project->statement=$request->statement;
+        $project->description=$request->description;
+        $project->deadline=$request->deadline;
+         
+               
+        $project->save();
+ Session::flash('success','Project details edited successsfully please click refresh!!!');
+
+         $user = Auth::user();
+       $teams = Detail::where('m_assigned',$id)->get();
+       
+       return view('projects.myteam')->withTeams($teams)->withUser($user);
     }
 
     /**
