@@ -4,8 +4,8 @@
 
 @include('partials.sidebar')
 
-	<div class="col-md-10">
-        <table class="table" style="margin-left: 3%;">
+	<div class="col-md-10" style="margin-left: 280px;">
+        <table class="table" style="width:1000px;border: 2px solid black;margin-top: -40%">
               <thead>
                 <tr>
                   <th scope="col">S.n.</th>

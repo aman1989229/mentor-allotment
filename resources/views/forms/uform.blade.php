@@ -4,10 +4,10 @@
 
 <div class="row"style="background-image: url('img/15.jfif');background-repeat: no-repeat;background-size:100% 100%;">
 	
-	<div class="col-md-8 col-md-offset-2" style="margin: 10px;margin-left: 200px;padding:40px;border: 4px solid black;border-radius: 70px 0 70px 0;color: white;">
+	<div class="col-md-8 col-md-offset-2" style="margin: 10px;margin-left: 200px;padding:40px;border: 4px solid black;border-radius: 70px 0 70px 0;color: black;">
 		<h1 style="text-align: center;"> Upload Your Details</h1>
 		<hr style="background-color: white;">
-		<div style="margin-left: 10px; color: white;"> 
+		<div style="margin-left: 10px; color: black;"> 
 		{!! Form::open(['route' => 'form.store','method'=>'POST']) !!}<!-- here form will open only but when we use model lets check edit.php inside posts
        upload a image set (files = true) -->
            {{Form::label('Name', 'Name:')}}

@@ -19,7 +19,11 @@ img:hover {
     <!-- Sidebar -->
     <nav id="sidebar" style="background-color: darkblue;width:10%;">
         <div class="sidebar-header"style="background-color: black; color: white;text-decoration: underline;">
-            <span class="col-md-5" style="margin-left: 25px; text-align: center;"><img src="/img/sea.jpg" alt="User's Profile" style="width:50%; border-radius: 50px;"></span>
+          @if($user->role_id=='2')
+            <span class="col-md-5" style="margin-left: 25px; text-align: center;"><img src="/img/user.gif" alt="User's Profile" style="width:50%; border-radius: 50px;"></span>
+            @else 
+            <span class="col-md-5" style="margin-left: 25px; text-align: center;"><img src="/img/prof.gif" alt="User's Profile" style="width:50%; border-radius: 50px;border:1px solid white;"></span>
+             @endif
             <span class="col-md-7" style="margin-left: 18px; text-align: center;"><h4>Dashboard</h4></span>
             
         </div>
