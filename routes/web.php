@@ -35,6 +35,7 @@ Route::get ('detail','DetailController@cgpa')->name('detail');
 
 Route::get('assign/{id}',['as'=>'project.edit','uses'=>'ProjectController@edit']);
 Route::get('delete/{id}',['as'=>'team.destroy','uses'=>'TeamController@destroy']);
+Route::get('change/{id}',['as'=>'project.show','uses'=>'ProjectController@show']);
 
 
 Route::get ('students','DetailController@students')->name('students');
@@ -44,3 +45,4 @@ Route::get ('dashboard','DetailController@dashboard')->name('dashboard');
 Route::resource('form','FormController',['except'=>'create']);
 Route::resource('team','TeamController');
 Route::resource('project','ProjectController');
+Route::resource('mentor','MentorController');

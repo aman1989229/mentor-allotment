@@ -35,7 +35,10 @@ img:hover {
                 
             </li>
             <li class="active">
-                <a href="#">Your Mentor</a>
+                <a href="{{route('mentor.index')}}">Your Mentor</a>
+              </li>
+              <li class="active">
+                <a href="{{route('project.index')}}">Your Project</a>
               </li>
              @else   
                 <li class="active">
