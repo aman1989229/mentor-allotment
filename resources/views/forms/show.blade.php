@@ -11,7 +11,7 @@
 
 <div class="jumbotron" style="margin: auto;width: 60%;border: 3px solid #73AD21;padding: 15px;"  >
   
-  <span style="margin-left: 210px;height: 120px; text-align: center;"><img src="/img/sea.jpg" alt="User's Profile" style="width:40%;height: 50%; border-radius: 250px;"></span>
+  <span style="margin-left: 210px;height: 120px; text-align: center;"><img src="/img/user.gif" alt="User's Profile" style="width:40%;height: 50%; border-radius: 250px;"></span>
   <table style="margin-left: 150px;margin-top: 40px;"><tr>
   <td class="display-4" style="font-size:30px;padding-left: 10px;">Name:</td><td class="display-4" style="font-size:27px;padding-left: 30px;"> {{$post->name}}</td></span></tr>
   <tr>
@@ -26,15 +26,15 @@
    @endif
   <br><br>
   <br>
-  <h2>Request : </h2>
+  <!--<h2>Request : </h2>
   <p class="lead" style="margin-top: 10px;">{{$post->requests}}</p>
   <hr class="my-4">
- <!-- @if($post->availability=="Yes")
-  <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;" class="alert alert-success">Available</div> -->
+  @if($post->availability=="Yes")
+  <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;" class="alert alert-success">Available</div>
   <a class="btn btn-warning btn-lg" href="#" style="margin-left: 5px;">Make Request</a>
- <!-- @else
-  <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;"  class="alert alert-danger">Booked</div>-->
-  <a href="#" class="btn-danger btn-lg">Convert into Pdf</a>
+  @else
+  <div style="width:70%; border:2; font-weight:bolder; font-size: 20px;"  class="alert alert-danger">Booked</div>
+  <a href="#" class="btn-danger btn-lg">Convert into Pdf</a>-->
   @endif
 </div>
 

@@ -40,8 +40,8 @@
 @include('partials.sidebar')
 
 @if($user->role_id=='3')
-<div class="col-md-10">
-
+<div class="col-md-10" style="background-color: lightgray;">
+<h3 style="margin-left: 50px;margin-top: 30px;">Select students(CGPA-wise):</h3>
   <div class="clearfix container-fluid row" style="margin-left: 10px;">
     <div class="col-sm-3" >
     	<div class="panel widget center bgimage" style="margin-bottom:0;overflow:hidden;background-image: url('img/giphy.gif')">
@@ -84,7 +84,8 @@
 </div></div>
 @else
 
-<div class="col-sm-3">
+<div class="col-sm-3" style="background-color: lightgray;">
+	<h3 style="margin-left: 50px;margin-top: 30px;">Mentors available:</h3>
     	<div class="panel widget center bgimage" style="margin-left:380px;margin-top:40px;overflow:hidden;background-image: url('img/tenor.gif')">
     	
     		<div class="panel-content">
