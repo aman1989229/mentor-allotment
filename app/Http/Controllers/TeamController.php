@@ -118,7 +118,8 @@ class TeamController extends Controller
             $user->assigned='2';
             $user->save();
             $post->delete(); 
-            $project->delete();
+            if($project!=NULL)
+           { $project->delete();}
 
             $user = Auth::user();
        $teams = Detail::where('m_assigned',$user->id)->get();
