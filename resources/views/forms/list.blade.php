@@ -5,7 +5,7 @@
   @include('partials.sidebar')
 
 		<div class="col-md-10" style="float: left;">
-			     <table class="table" style="margin-left: 3%; margin-top: 4%;float: left;">
+			     <table class="table" style="margin-left: 3%; margin-top: 4%;float: left; border:2px solid black;width:990px;">
               <thead>
                 <tr>
                   @if($user->role_id=='3')
@@ -13,10 +13,10 @@
                   <th scope="col">Name</th>
                   <th scope="col">Registraion No:</th>
                   <th scope="col">CGPA(Out of 10)</th>
-                  <th scope="col">Status</th>
+                  <th scope="col">Status</th><th></th>
                   @else
                   <th scope="col">S.n.</th>
-                  <th scope="col">Name</th>
+                  <th scope="col">Name</th><th></th>
                   
                   @endif
                 </tr>
