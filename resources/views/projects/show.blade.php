@@ -10,8 +10,8 @@
 </style>
 
 @if($detail==NULL)
-<div>
-  <h1>Not Assigned Yet</h1>
+<div style="margin:10%;padding-left: 200px;">
+  <marquee direction="left" onmouseover="stop();" onmouseout="start();" ><h1>No Project Assigned Yet!!</h1></marquee>
 </div>
 @else
 <div class="jumbotron" style="margin: auto;width: 60%;border: 3px solid #73AD21;padding: 15px;"  >

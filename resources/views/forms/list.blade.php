@@ -5,6 +5,7 @@
   @include('partials.sidebar')
 
 		<div class="col-md-10" style="float: left;">
+      
 			     <table class="table" style="margin-left: 3%; margin-top: 4%;float: left; border:2px solid black;width:990px;">
               <thead>
                 <tr>
