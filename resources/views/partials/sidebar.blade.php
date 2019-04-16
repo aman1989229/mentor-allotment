@@ -35,14 +35,22 @@ img:hover {
            <hr style="background-color: black;" />
 
            @if($user->form_status=='1')
+           <li class="active">
+                <a href="{{route('form.edit',$user->id)}}">Edit Details</a>
+                
+            </li>
+            <hr style="background-color: black;" />
            @if($user->role_id=='2')
+           
             <li class="active">
                 <a href="{{route('dashboard')}}">Mentors</a>
                 
             </li>
+            <hr style="background-color: black;" />
             <li class="active">
                 <a href="{{route('mentor.index')}}">Your Mentor</a>
               </li>
+              <hr style="background-color: black;" />
               <li class="active">
                 <a href="{{route('project.index')}}">Your Project</a>
               </li>
@@ -51,6 +59,7 @@ img:hover {
                 <a href="{{route('dashboard')}}">Students</a>
                 
             </li>
+            <hr style="background-color: black;" />
             <li class="active">
                 <a href="{{route('team.show',$user->id)}}">My Team</a>
 

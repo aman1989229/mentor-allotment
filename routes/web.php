@@ -36,6 +36,7 @@ Route::get ('detail','DetailController@cgpa')->name('detail');
 Route::get('assign/{id}',['as'=>'project.edit','uses'=>'ProjectController@edit']);
 Route::get('delete/{id}',['as'=>'team.destroy','uses'=>'TeamController@destroy']);
 Route::get('change/{id}',['as'=>'project.show','uses'=>'ProjectController@show']);
+Route::get('edit/{id}',['as'=>'mentor.edit','uses'=>'MentorController@edit']);
 
 
 Route::get ('students','DetailController@students')->name('students');

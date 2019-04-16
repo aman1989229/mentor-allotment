@@ -29,7 +29,8 @@
                    		@if($team->status=='2') Completed @endif
                    		@if($team->status=='1') Working @endif
                    	</td>
-                      <td> @if($team->status=='3')<a href="{{url('assign/'.$team->user_id)}}" class="btn btn-warning btn-sm">Assign Project</a>@endif</td>
+                      <td> @if($team->status=='3')<a href="{{url('assign/'.$team->user_id)}}" class="btn btn-warning btn-sm">Assign Project</a>@else <a href="{{url('edit/'.$team->user_id)}}" class="btn btn-default btn-sm">Edit Project</a> @endif</td>
+                      
                    	<td><a href="{{route('form.show',$team->user_id)}}" class="btn btn-success btn-sm">View</a>
                    	 <a href="{{url('delete/'.$team->user_id)}}" class="btn btn-xs btn-danger"><span class="fa fa-trash"></span></a></td>
                    </tr>

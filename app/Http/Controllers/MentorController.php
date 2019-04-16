@@ -71,6 +71,10 @@ class MentorController extends Controller
     public function edit($id)
     {
         //
+        $project=Project::where('user_id','=',$id)->first();
+        $students= Detail::all();
+         
+        return view('projects.editassign')->withStudents($students)->withProject($project);
     }
 
     /**
