@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('assign', function () {
-    return view('projects.assign');
-});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -30,10 +28,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 //contact us
 Route::get ('about','PageController@about')->name('about');
 Route::get ('contact','PageController@contact')->name('contact');
+
 Route::get ('details','DetailController@index')->name('details');
 Route::get ('detail','DetailController@cgpa')->name('detail');
 
 
+Route::get('assign/{id}',['as'=>'project.edit','uses'=>'ProjectController@edit']);
+Route::get('delete/{id}',['as'=>'team.destroy','uses'=>'TeamController@destroy']);
 
 
 Route::get ('students','DetailController@students')->name('students');
@@ -42,4 +43,4 @@ Route::get ('dashboard','DetailController@dashboard')->name('dashboard');
 
 Route::resource('form','FormController',['except'=>'create']);
 Route::resource('team','TeamController');
-
+Route::resource('project','ProjectController');

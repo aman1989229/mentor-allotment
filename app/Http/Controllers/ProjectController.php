@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Detail;
 use App\Mentordetail;
 use User;
-use App\Team;
 use App\Cgpa;
 use Session;
 use App\Project;
+use App\Detail;
 
-class TeamController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -33,7 +32,6 @@ class TeamController extends Controller
     public function create()
     {
         //
-
     }
 
     /**
@@ -45,6 +43,31 @@ class TeamController extends Controller
     public function store(Request $request)
     {
         //
+          $id=$request->input('user_id');
+ 
+        $user=Detail::where('user_id','=',$id)->first();
+        $user->status='1';
+
+        $user->save();
+
+        
+        $project=new Project;
+        $project->user_id=$request->user_id;
+        $project->title=$request->title;
+        $project->statement=$request->statement;
+        $project->description=$request->description;
+        $project->deadline=$request->deadline;
+         
+               
+        $project->save();
+
+
+         $user = Auth::user();
+       $teams = Detail::where('m_assigned',$id)->get();
+       
+       return view('projects.myteam')->withTeams($teams)->withUser($user);
+     
+
     }
 
     /**
@@ -55,11 +78,7 @@ class TeamController extends Controller
      */
     public function show($id)
     {
-        $user = Auth::user();
-       $teams = Detail::where('m_assigned',$id)->get();
-       
-       return view('projects.myteam')->withTeams($teams)->withUser($user);
-
+        //
     }
 
     /**
@@ -70,23 +89,10 @@ class TeamController extends Controller
      */
     public function edit($id)
     {
-        //
-         $user = Auth::user();
-            $assign=Detail::find($id);
-
-            $assign->assigned='1';
-            $assign->m_assigned=$user->id;
-            $assign->save();
-
-            $team=new Team;
-            $team->user_id=$user->id;
-            $team->student_id=$assign->user_id;
-            $team->save();
-
-           $user = Auth::user();
-       $teams = Detail::where('m_assigned',$user->id)->get();
-       
-       return view('projects.myteam')->withTeams($teams)->withUser($user);
+         
+          $students= Detail::all();
+         
+        return view('projects.assign')->withStudents($students);
     }
 
     /**
@@ -110,20 +116,5 @@ class TeamController extends Controller
     public function destroy($id)
     {
         //
-           $post=Team::where('student_id','=',$id)->first();
-            $project=Project::where('user_id','=',$id)->first();
-            $user=Detail::where('user_id','=',$id)->first();
-            $user->status='3';
-            $user->m_assigned=NULL;
-            $user->assigned='2';
-            $user->save();
-            $post->delete(); 
-            $project->delete();
-
-            $user = Auth::user();
-       $teams = Detail::where('m_assigned',$user->id)->get();
-       
-       return view('projects.myteam')->withTeams($teams)->withUser($user);
- 
     }
 }

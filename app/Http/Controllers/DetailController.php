@@ -10,6 +10,7 @@ use App\Mentordetail;
 use User;
 use App\Cgpa;
 use Session;
+use App\Project;
 
 
 class DetailController extends Controller
@@ -62,16 +63,6 @@ class DetailController extends Controller
      
       }
 
-
-     public function assign($id)
-    {        
-              $user = Auth::user();
-            $assign=Detail::find($id);
-
-            $assign->assigned='1';
-            $assign->m_assigned=$user->id;
-
-            return view('dashboard');
-    }
+   
       
 }
