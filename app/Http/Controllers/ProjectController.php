@@ -24,7 +24,7 @@ class ProjectController extends Controller
         //
         $user=Auth::user();
         $detail=Project::where('user_id','=',$user->id)->first();
-
+          
         return view('projects.show')->withDetail($detail)->withUser($user);
     }
 

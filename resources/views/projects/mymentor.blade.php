@@ -4,6 +4,12 @@
 
 @include('partials.sidebar')
 
+@if($detail->m_assigned==NULL)
+  
+  <div>
+    <h1>Mentor Not Assigned yet</h1>
+  </div>
+@else
 	<div class="col-md-10" style="margin-left: 280px;">
         <table class="table" style="width:700px;border: 2px solid black;margin-top: -40%">
               <thead>
@@ -26,4 +32,5 @@
             </table>
 
 		</div>
+    @endif
     @endsection

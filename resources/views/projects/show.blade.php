@@ -9,6 +9,11 @@
   }
 </style>
 
+@if($detail==NULL)
+<div>
+  <h1>Not Assigned Yet</h1>
+</div>
+@else
 <div class="jumbotron" style="margin: auto;width: 60%;border: 3px solid #73AD21;padding: 15px;"  >
   
   <span style="margin-left: 210px;height: 120px; text-align: center;"><img src="/img/sea.jpg" alt="User's Profile" style="width:40%;height: 50%; border-radius: 250px;"></span>
@@ -27,5 +32,6 @@
    <a href="{{url('change/'.$detail->user_id)}}" class="btn-danger btn-lg btn-block" style="text-align: center;">Change status as Project Completed</a>
    @endif
 </div>
+@endif
 
 @endsection

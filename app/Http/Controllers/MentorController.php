@@ -26,7 +26,7 @@ class MentorController extends Controller
          $detail=Detail::where('user_id','=',$user->id)->first();
          $mentor=Mentordetail::where('user_id','=',$detail->m_assigned)->first();
         
-        return view('projects.mymentor')->withMentor($mentor)->withUser($user);
+        return view('projects.mymentor')->withMentor($mentor)->withUser($user)->withDetail($detail);
        
      }
 
